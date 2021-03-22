@@ -7,6 +7,15 @@ router.get('/insert', (req, res) => {
     res.render('pages/insertCustomer', { customer: new Customer() });
 })
 
+// Update Customer Route
+router.get('/update', (req, res) => {
+    res.render('pages/updateCustomer');
+})
+
+// Delete Customer Route
+router.get('/delete', (req, res) => {
+    res.render('pages/deleteCustomer');
+})
 
 // Insert New Customer Route
 router.post('/', async (req, res) => {
