@@ -1,0 +1,18 @@
+<h2><%= customer.firstName + ' ' + customer.lastName %></h2>
+<h3>Personal Number</h3>
+<p><%= customer.personal_number %></p>
+
+<h3>Account Number</h3>
+<p><%= customer.account_number %></p>
+
+<h3>Date of Birth</h3>
+<p><%= customer.date_of_birth.toDateString() %></p>
+
+<h3>City</h3>
+<p><%= customer.city %></p>
+
+<h3>Account Created At</h3>
+<p><%= customer.created_date.toDateString() %></p>
+
+<a href='/customers/<%= customer.personal_number %>/update'>Edit</a>
+<%- include('../partials/deleteForm', { url: `/customers/${customer.personal_number}`}) %>

@@ -8,7 +8,10 @@ const customerSchema = new mongoose.Schema({
     },
     account_number: {
         type: Number,
-        required: true
+        required: true,
+        default: function () {
+            return (number = Math.floor(Math.random() * 8999999999 + 10000000000));
+        }
     },
     firstName: {
         type: String,
