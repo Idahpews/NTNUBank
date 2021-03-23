@@ -2,19 +2,19 @@
     <h3>Edit Customer</h3>
     <form action='/customers/<%= customer.personal_number %>?_method=PUT' method='POST'>
         <label for='personalNum'>Personal Number:</label><br>
-        <input type='text' name='personalNum' id='personalNum' value='<%= customer.personal_number %>'><br>
+        <input type='text' name='personalNum' id='personalNum' value='<%= customer.personal_number %>' pattern='[0-9]{11}' title='Numbers only, max 11 digits.' required><br>
 
         <label for='fname'>First name:</label><br>
-        <input type='text' name='fname' id='fname' value='<%= customer.firstName %>'><br>
+        <input type='text' name='fname' id='fname' value='<%= customer.firstName %>' required><br>
 
         <label for='lname'>Last name:</label><br>
-        <input type='text' name='lname' id='lname' value='<%= customer.lastName %>'><br>
+        <input type='text' name='lname' id='lname' value='<%= customer.lastName %>' required><br>
 
         <label for='dateofbirth'>Date of Birth:</label><br>
-        <input type='date' name='dateofbirth' id='dateofbirth' value='<%= customer.date_of_birth == null ? '' : customer.date_of_birth.toISOString().split('T')[0] %>'><br>
+        <input type='date' name='dateofbirth' id='dateofbirth' value='<%= customer.date_of_birth == null ? '' : customer.date_of_birth.toISOString().split('T')[0] %>' required><br>
 
         <label for='city'>City:</label><br>
-        <input type='text' name='city' id='city' value='<%= customer.city %>'><br><br>
+        <input type='text' name='city' id='city' value='<%= customer.city %>' required><br><br>
 
         <a href='/customers/<%= customer.personal_number %>'>Cancel</a>
         <button type='submit'>Save</button>
