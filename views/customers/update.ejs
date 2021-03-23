@@ -1,3 +1,5 @@
+<% let date = new Date() %>
+<% let today = date.toISOString().split('T')[0] %>
 <div>
     <h3>Edit Customer</h3>
     <form action='/customers/<%= customer.personal_number %>?_method=PUT' method='POST'>
@@ -11,7 +13,7 @@
         <input type='text' name='lname' id='lname' value='<%= customer.lastName %>' required><br>
 
         <label for='dateofbirth'>Date of Birth:</label><br>
-        <input type='date' name='dateofbirth' id='dateofbirth' value='<%= customer.date_of_birth == null ? '' : customer.date_of_birth.toISOString().split('T')[0] %>' required><br>
+        <input max="<%= today %>" type='date' name='dateofbirth' id='dateofbirth' value='<%= customer.date_of_birth == null ? '' : customer.date_of_birth.toISOString().split('T')[0] %>' required><br>
 
         <label for='city'>City:</label><br>
         <input type='text' name='city' id='city' value='<%= customer.city %>' required><br><br>
