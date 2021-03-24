@@ -1,7 +1,7 @@
 <% let date = new Date() %>
 <% let today = date.toISOString().split('T')[0] %>
-<div>
-    <h3>Insert Customer</h3>
+<div class="container">
+    <h1>Insert Customer</h1>
     <form action='/customers' method='POST'>
         <label for='personalNum'>Personal Number:</label><br>
         <input type='text' name='personalNum' id='personalNum' value='<%= customer.personal_number %>' pattern='[0-9]{11}' title='Numbers only, max 11 digits.' required><br>

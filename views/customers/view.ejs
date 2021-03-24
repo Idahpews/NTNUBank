@@ -1,3 +1,4 @@
+<div class="container">
 <h2><%= customer.firstName + ' ' + customer.lastName %></h2>
 <h3>Personal Number</h3>
 <p><%= customer.personal_number %></p>
@@ -16,3 +17,4 @@
 
 <a href='/customers/<%= customer.personal_number %>/update'>Edit</a>
 <%- include('../partials/deleteForm', { url: `/customers/${customer.personal_number}`}) %>
+</div>
