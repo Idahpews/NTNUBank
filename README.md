@@ -2,7 +2,7 @@
 
 This is the first assignment for cloud technologies.
 
->This is just for educational use, and the personal information is pulic to view so do not insert any private information like the real personal number!
+>This is just for educational use, and the personal information is public to view so do not insert any private information like the real personal number!
 
 &nbsp;
 
